@@ -1,0 +1,23 @@
+{
+  "estado": "correcto",
+  "fecha_utc": "2026-11-21T02:39:32.780888+00:00",
+  "comprobaciones": [
+    "2109 archivos importados verificados, incluidos los 1001 grafos FHCP y sus certificados.",
+    "1000 peliculas con URL unicas y creditos; CSV y procedencia del rastreo comprobados.",
+    "54 corridas FHCP recalculadas: costos, tiempos, certificados y un ciclo encontrado por el solver.",
+    "KNN: particiones sin solapamiento, k por validacion y metricas recalculadas para tres distancias.",
+    "Iris y diabetes: particiones, matrices y metricas independientes verificadas.",
+    "Cuatro cuadernos ejecutados, sin errores y con graficas incrustadas.",
+    "README con cuatro actividades, siete capturas Qt y enlaces de la entrega validos.",
+    "1286 pruebas aprobadas: 28 propias y 1258 del nucleo compartido FHCP."
+  ],
+  "sha256_programas": {
+    "ia_unidad3/common.py": "04637634426c618e35fc875de5976f58963e8800e733ae0f152fbc479e150177",
+    "ia_unidad3/fhcp.py": "1fba988926c629c4fbf095012f5c8baa25d3b018ee258820797473a41a93114a",
+    "ia_unidad3/interface.py": "bf5af72bdcbc3fd365a3c115e7ae129f9ec3509ede9b256ae5b2af9cb0ecd67c",
+    "ia_unidad3/knn.py": "fbae0bb5e5d928866ec09c231400997852e3a62ba882ef0ff3e75541aea2ee36",
+    "ia_unidad3/movies.py": "62862c78bf9e2b606c2d38f2c526181f2d7656641d9fdc9d52cb276834a10eef",
+    "ia_unidad3/trees.py": "48d9f457c7bc9a12b695b59d51f9c0f18c93176cb8f7cc07ad831051af6fc071",
+    "ia_unidad3/__init__.py": "dbd215edba7bc6c32ad17f24c3c154574ae1f7a5aa549f96923b09c0ad682a95"
+  }
+}

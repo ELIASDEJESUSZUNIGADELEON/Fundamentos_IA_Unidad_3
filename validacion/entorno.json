@@ -1,0 +1,16 @@
+{
+  "python_aplicaciones": "3.12.14",
+  "plataforma": "Windows-11-10.0.26300-SP0",
+  "procesador": "AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD",
+  "python_pruebas_fhcp": "3.14.10",
+  "numpy_pruebas_fhcp": "2.5.5",
+  "comandos": [
+    "python ejecutar.py comparar --semilla 2430085 --evaluaciones 3000 --segundos 2 --salida nueva_comparacion",
+    "python ejecutar.py peliculas --maximo 1000 --salida nuevo_dataset",
+    "python ejecutar.py knn --semilla 2430085 --salida nuevo_knn",
+    "python ejecutar.py arboles --dataset Iris --semilla 2430085 --salida nuevo_iris",
+    "python ejecutar.py arboles --dataset Diabetes --semilla 2430085 --salida nuevo_diabetes",
+    "python herramientas/generar_capturas.py",
+    "python -m pytest -q --junitxml=validacion/pruebas-propias.xml"
+  ]
+}

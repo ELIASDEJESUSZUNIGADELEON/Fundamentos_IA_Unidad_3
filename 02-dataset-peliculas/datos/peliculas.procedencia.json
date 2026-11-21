@@ -1,0 +1,26 @@
+{
+  "fecha_utc": "2026-11-21T02:27:01.443202+00:00",
+  "maximo_solicitado": 1000,
+  "filas": 1000,
+  "licencia_datos": "CC BY-SA 4.0",
+  "intervalo_minimo_segundos": 1.1,
+  "paginas": [
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_American_films_of_2024",
+      "sha256_html": "4ae10c144168f97dcb6e01cb87b556089707a0385d5470f40268eac564a3683f",
+      "candidatas": 420
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_American_films_of_2023",
+      "sha256_html": "a986963eb39fbf372ad341cd88efecf770e8c2fd360c6aee42804b5a7f84109c",
+      "candidatas": 308
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_American_films_of_2022",
+      "sha256_html": "b9bc63b15239ff280b5438edfae2ae64b7b745469c0068990bfdc0068a352acd",
+      "candidatas": 291
+    }
+  ],
+  "csv_sha256": "62dd3373a75574a0ab6358bb49620a5d2f7e8f5db785cb5349723ecaf26d2d55",
+  "observacion": "Listas anuales de estrenos estadounidenses. Géneros vacíos si la tabla no los ofrece; créditos conservados como texto. No se descargan sinopsis ni artículos individuales."
+}
