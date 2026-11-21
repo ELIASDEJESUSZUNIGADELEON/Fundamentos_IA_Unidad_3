@@ -1,6 +1,6 @@
 {
   "estado": "correcto",
-  "fecha_utc": "2026-11-21T02:39:32.780888+00:00",
+  "fecha_utc": "2026-11-21T03:34:12.922303+00:00",
   "comprobaciones": [
     "2109 archivos importados verificados, incluidos los 1001 grafos FHCP y sus certificados.",
     "1000 peliculas con URL unicas y creditos; CSV y procedencia del rastreo comprobados.",
@@ -8,7 +8,7 @@
     "KNN: particiones sin solapamiento, k por validacion y metricas recalculadas para tres distancias.",
     "Iris y diabetes: particiones, matrices y metricas independientes verificadas.",
     "Cuatro cuadernos ejecutados, sin errores y con graficas incrustadas.",
-    "README con cuatro actividades, siete capturas Qt y enlaces de la entrega validos.",
+    "README con cuatro actividades, siete capturas de salida sencillas, interfaces aparte y enlaces validos.",
     "1286 pruebas aprobadas: 28 propias y 1258 del nucleo compartido FHCP."
   ],
   "sha256_programas": {

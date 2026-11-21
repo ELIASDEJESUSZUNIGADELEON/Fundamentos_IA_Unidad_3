@@ -1,0 +1,16 @@
+python herramientas/ver_salida.py ciclo
+
+FHCP - Comprobacion del ciclo encontrado por el solver
+Instancia: graph2
+Algoritmo: ABC (colonia de abejas)
+Semilla: 2430087
+Estado registrado: success
+Evaluaciones: 2207
+Costo recalculado: 0
+Validacion independiente: True
+
+Ruta (incluye regreso al inicio):
+18 -> 53 -> 44 -> 12 -> 1 -> 48 -> 3 -> 8 -> 11 -> 49 -> 59 -> 40 -> 45 -> 64 -> 38 -> 23 -> 6 -> 58
+27 -> 62 -> 67 -> 24 -> 14 -> 60 -> 30 -> 5 -> 63 -> 28 -> 61 -> 10 -> 2 -> 51 -> 66 -> 4 -> 35 -> 17
+37 -> 16 -> 9 -> 7 -> 19 -> 20 -> 22 -> 54 -> 52 -> 34 -> 15 -> 26 -> 69 -> 13 -> 25 -> 33 -> 32 -> 41
+56 -> 39 -> 46 -> 21 -> 31 -> 65 -> 57 -> 47 -> 43 -> 42 -> 55 -> 70 -> 29 -> 68 -> 50 -> 36 -> 18

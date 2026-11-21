@@ -1,0 +1,19 @@
+python herramientas/ver_salida.py iris
+
+Arbol de decision - Iris
+Semilla: 2430085
+Filas: 150
+Criterio: entropy
+Profundidad seleccionada: 2
+Ejemplos de prueba: 30
+Exactitud: 0.9333
+F1 macro: 0.9333
+
+Matriz de confusion (filas reales, columnas predichas):
+   10    0    0
+    0    9    1
+    0    1    9
+
+Clases: Iris-setosa, Iris-versicolor, Iris-virginica
+
+Preparacion y evaluacion independientes para este dataset.

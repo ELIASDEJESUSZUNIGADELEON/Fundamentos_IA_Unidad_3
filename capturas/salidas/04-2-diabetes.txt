@@ -1,0 +1,18 @@
+python herramientas/ver_salida.py diabetes
+
+Arbol de decision - Diabetes
+Semilla: 2430085
+Filas: 768
+Criterio: entropy
+Profundidad seleccionada: 4
+Ejemplos de prueba: 154
+Exactitud: 0.7338
+F1 macro: 0.7089
+
+Matriz de confusion (filas reales, columnas predichas):
+   79   21
+   20   34
+
+Clases: Sin diabetes, Con diabetes
+
+Preparacion y evaluacion independientes para este dataset.

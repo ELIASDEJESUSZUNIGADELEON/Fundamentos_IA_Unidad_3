@@ -1,0 +1,11 @@
+python herramientas/ver_salida.py referencia
+
+FHCP - Validacion del certificado de referencia
+Instancia: graph1
+Vertices: 66
+Aristas: 99
+Vertices diferentes en la ruta: 66
+Validacion independiente: True
+Costo recalculado: 0
+
+El certificado de referencia no se entrega a los solvers.

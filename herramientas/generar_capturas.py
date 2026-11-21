@@ -1,68 +1,39 @@
-"""Capturas directas de las ventanas Qt: no se construyen páginas HTML."""
+"""Guarda salidas reales y captura un visor de texto sencillo, como en la unidad 1."""
 
 import argparse
-import json
 import os
 import sys
+from contextlib import redirect_stdout
+from io import StringIO
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "herramientas"))
+from ver_salida import ACTIVIDADES, ejecutar, mostrar
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--visible", action="store_true")
     args = parser.parse_args()
-    if not (ROOT / "01-fhcp-challenge/resultados/comparacion.json").exists():
-        raise FileNotFoundError("Primero ejecuta la comparación FHCP descrita en EJECUTAR.md.")
     if not args.visible:
         os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-    from ia_unidad3 import trees
-    from ia_unidad3.interface import MainWindow, prepare_app
+    from PySide6.QtWidgets import QApplication
 
-    app = prepare_app()
-    window = MainWindow()
-    window.resize(1500, 960)
-    window.show()
+    app = QApplication.instance() or QApplication([])
+    app.setQuitOnLastWindowClosed(False)
     folder = ROOT / "capturas"
-    folder.mkdir(exist_ok=True)
-
-    def capture(name):
+    logs = folder / "salidas"
+    logs.mkdir(parents=True, exist_ok=True)
+    for activity, name in ACTIVIDADES.items():
+        output = StringIO()
+        with redirect_stdout(output):
+            ejecutar(activity)
+        content = f"python herramientas/ver_salida.py {activity}\n\n" + output.getvalue()
+        (logs / f"{name}.txt").write_text(content, encoding="utf-8")
+        mostrar(content, activity, folder / f"{name}.png")
         app.processEvents()
-        for plot in window.findChildren(__import__("ia_unidad3.interface", fromlist=["Plot"]).Plot):
-            plot.draw()
-        app.processEvents()
-        assert window.grab().save(str(folder / name))
-        print("Captura:", name, flush=True)
-
-    capture("01-1-fhcp-referencia.png")
-    window.pages["fhcp"].show_benchmark()
-    capture("01-2-fhcp-comparacion.png")
-    from ia_unidad3 import fhcp
-
-    comparison = json.loads(
-        (ROOT / "01-fhcp-challenge/resultados/comparacion.json").read_text(encoding="utf-8")
-    )
-    success = next(r for r in comparison["corridas"] if r["resultado"]["validation"]["valid"])
-    page = window.pages["fhcp"]
-    page.instance.setCurrentText(success["instancia"])
-    page.algorithm.setCurrentIndex(list(fhcp.NAMES).index(success["algoritmo"]))
-    page.seed.setValue(success["semilla"])
-    page.seconds.setValue(comparison["limite_segundos"])
-    page.apply_result((success, fhcp.load_graph(success["instancia"])))
-    capture("01-3-fhcp-ciclo.png")
-    window.open("peliculas")
-    capture("02-peliculas.png")
-    window.open("knn")
-    capture("03-knn.png")
-    page = window.open("arboles")
-    capture("04-1-iris.png")
-    page.dataset.setCurrentText("Diabetes")
-    page.apply_result(trees.experiment("Diabetes"))
-    page.view.setCurrentText("Confusión")
-    capture("04-2-diabetes.png")
-    window.close()
+        print("Captura sencilla:", name, flush=True)
 
 
 if __name__ == "__main__":

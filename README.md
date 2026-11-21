@@ -4,6 +4,8 @@
 
 Actividades realizadas en la unidad 3 de Fundamentos de Inteligencia Artificial.
 
+[Ver las interfaces de las aplicaciones](capturas/gui/)
+
 ## 1. FHCP Challenge: ciclos hamiltonianos
 
 Búsqueda de rutas cerradas que visitan todos los vértices una sola vez. Incluye algoritmos genéticos, recocido simulado, colonia de hormigas, colonia de abejas, evolución diferencial y enjambre de partículas.
@@ -16,19 +18,19 @@ Trabajo en equipo con **Diego Eduardo Zapata Aguilar**, **Junior Arturo Vázquez
 
 Se comprobó el ciclo oficial de graph1, con 66 vértices y 99 aristas. El certificado se utiliza para verificar la referencia y se mantiene separado de las búsquedas.
 
-![Certificado de referencia del grafo FHCP validado](capturas/01-1-fhcp-referencia.png)
+![Salida de la validación del certificado FHCP](capturas/01-1-fhcp-referencia.png)
 
 ### 1.2. Ciclo encontrado por el solver
 
 La colonia de abejas encontró un ciclo de costo cero en graph2. La ruta se comprobó con un validador independiente.
 
-![Ciclo hamiltoniano encontrado por colonia de abejas](capturas/01-3-fhcp-ciclo.png)
+![Salida de la comprobación del ciclo encontrado por colonia de abejas](capturas/01-3-fhcp-ciclo.png)
 
 ### 1.3. Comparación de metaheurísticas
 
 Se realizaron 54 intentos: seis algoritmos, tres grafos y tres semillas, con un máximo de 3,000 evaluaciones y dos segundos por intento. Se obtuvo un ciclo certificado; los otros intentos conservaron sus mejores rutas al agotar el presupuesto.
 
-![Comparación de costos y tiempos de las seis metaheurísticas](capturas/01-2-fhcp-comparacion.png)
+![Salida de los costos y tiempos de las seis metaheurísticas](capturas/01-2-fhcp-comparacion.png)
 
 ## 2. Dataset de películas
 
@@ -38,7 +40,7 @@ Se recopilaron **1,000 películas con URL únicas** de las listas de 2022, 2023 
 
 [Código y actividad](02-dataset-peliculas/) · [Dataset CSV](02-dataset-peliculas/datos/peliculas.csv) · [Cuaderno de análisis](02-dataset-peliculas/analisis_dataset.ipynb)
 
-![Aplicación del dataset con las mil películas recopiladas](capturas/02-peliculas.png)
+![Salida de la revisión de las mil películas recopiladas](capturas/02-peliculas.png)
 
 ## 3. K vecinos más cercanos desde cero
 
@@ -48,7 +50,7 @@ El experimento usa 360 observaciones sintéticas de semillas y selecciona k con 
 
 [Código y actividad](03-knn-desde-cero/) · [Cuaderno ejecutado](03-knn-desde-cero/knn_manual.ipynb) · [Resultados](03-knn-desde-cero/resultados/experimento.json)
 
-![Clasificador KNN con nuevo punto, vecinos y métricas de prueba](capturas/03-knn.png)
+![Salida de las métricas KNN y la clasificación de un punto nuevo](capturas/03-knn.png)
 
 ## 4. Aprendizaje automático: árboles de decisión
 
@@ -60,10 +62,10 @@ Análisis exploratorio, preparación de datos y clasificación con árboles de d
 
 Se clasificaron las tres especies de Iris con sus cuatro medidas. El árbol de profundidad 2 obtuvo 93.3% de exactitud en los 30 ejemplos de prueba.
 
-![Árbol de clasificación de Iris con sus resultados](capturas/04-1-iris.png)
+![Salida de la evaluación del árbol de Iris](capturas/04-1-iris.png)
 
 ### 4.2. Diabetes
 
 Se prepararon los valores faltantes mediante imputación por mediana y se entrenó un árbol de profundidad 4. La evaluación obtuvo 73.4% de exactitud en los 154 ejemplos de prueba.
 
-![Matriz de confusión del árbol entrenado con diabetes](capturas/04-2-diabetes.png)
+![Salida de la evaluación y matriz de confusión de diabetes](capturas/04-2-diabetes.png)

@@ -1,0 +1,20 @@
+python herramientas/ver_salida.py knn
+
+KNN manual - Clasificacion de semillas sinteticas
+Semilla: 2430085
+Entrenamiento: 216
+Validacion: 72
+Prueba: 72
+
+Resultados en prueba:
+Distancia          k     Exactitud    F1 macro
+Euclidiana        13        0.7083      0.7032
+Manhattan         13        0.7222      0.7173
+Mixta             13        0.7083      0.7032
+
+Nuevo punto: [6.2, 2.6]
+  Euclidiana: Trigo
+  Manhattan: Trigo
+  Mixta: Trigo
+
+k seleccionado con validacion; prueba reservada.

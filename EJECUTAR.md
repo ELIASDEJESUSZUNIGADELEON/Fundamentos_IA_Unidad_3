@@ -54,7 +54,16 @@ python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-Las siete capturas se obtienen directamente de widgets Qt. `--visible` permite mostrar las ventanas durante la captura. La comparación FHCP debe existir antes de generar las imágenes. Los registros de pruebas y de integridad están en `validacion/`.
+Las siete capturas principales muestran salidas reales en un visor de texto plano, con el mismo formato sencillo de la unidad 1. Los TXT se conservan en `capturas/salidas/`; la comparación FHCP se lee de los resultados guardados y los ciclos se validan de nuevo. `--visible` muestra el visor durante la captura. Los registros de pruebas y de integridad están en `validacion/`.
+
+Para consultar una salida en la terminal o abrirla en una ventana sencilla:
+
+```powershell
+python herramientas/ver_salida.py ciclo
+python herramientas/ver_salida.py knn --ventana
+```
+
+Las capturas de las interfaces están en `capturas/gui/`. Se pueden regenerar con `python herramientas/generar_capturas_gui.py`. La interfaz adicional FHCP y los experimentos locales están separados del código original del equipo en `01-fhcp-challenge/proyecto_equipo/`, que se conserva sin modificar.
 
 Las aplicaciones y los cuadernos se ejecutaron con Python 3.12. El núcleo original FHCP también se comprobó con Python 3.14, su versión de referencia. Para repetir esas pruebas desde `01-fhcp-challenge/proyecto_equipo`, utiliza Python 3.14 con NumPy y pytest:
 

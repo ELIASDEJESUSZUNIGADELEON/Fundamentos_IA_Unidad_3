@@ -1,0 +1,22 @@
+python herramientas/ver_salida.py peliculas
+
+Dataset de peliculas - Revision del CSV recopilado
+Registros: 1000
+URL unicas: 1000
+Registros con creditos: 1000
+Huella del archivo verificada: True
+
+Peliculas por anio:
+  2022: 272
+  2023: 308
+  2024: 420
+
+Primeros registros:
+  2024  Self Reliance
+  2024  DarkGame
+  2024  Night Swim
+  2024  He Went That Way
+  2024  The Painter
+  2024  The Bricklayer
+
+Fuente: listas anuales de Wikipedia. CSV guardado en datos/.

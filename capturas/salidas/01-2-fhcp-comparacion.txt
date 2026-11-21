@@ -1,0 +1,17 @@
+python herramientas/ver_salida.py comparacion
+
+FHCP - Resultados guardados de la comparacion
+Grafos: graph1, graph2, graph18
+Semillas: 2430085, 2430086, 2430087
+Intentos: 54
+Presupuesto: 3000 evaluaciones / 2 segundos por intento
+
+Algoritmo     Intentos   Exitos    Costo medio    Tiempo (s)
+GA                   9        0          1.111        1.4468
+SA                   9        0          4.556        0.4338
+AS                   9        0          3.667        2.0000
+ABC                  9        1          0.889        0.8862
+DE                   9        0          1.111        1.9530
+PSO                  9        0          1.222        1.9211
+
+Un agotamiento no demuestra que no exista ciclo.

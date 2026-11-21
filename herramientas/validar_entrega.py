@@ -143,9 +143,13 @@ def main():
     assert len(images) == 7
     for path in images:
         with Image.open(path) as im:
-            assert im.width >= 1100 and im.height >= 740
+            assert im.width >= 1100 and im.height >= 300
             im.verify()
-    ok("README con cuatro actividades, siete capturas Qt y enlaces de la entrega validos.")
+    assert len(list((ROOT / "capturas/salidas").glob("*.txt"))) == 7
+    assert len(list((ROOT / "capturas/gui").glob("*.png"))) == 7
+    ok(
+        "README con cuatro actividades, siete capturas de salida sencillas, interfaces aparte y enlaces validos."
+    )
 
     tests = 0
     for filename, expected in [("pruebas-propias.xml", 28), ("pruebas-fhcp.xml", 1258)]:
